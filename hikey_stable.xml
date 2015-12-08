@@ -41,7 +41,7 @@
 
 	<!-- Linux kernel -->
 	<project remote="96boards" path="linux" name="linux" revision="88c232f5ef5f91d4fc3b60e58035c77eb526603d" />
-	<!-- project remote="linux" path="linux" name="linux" /-->
+	<!-- project remote="linux" path="linux" name="linux" revision="6a13feb9c82803e2b815eca72fa7a9f5561d7861" /-->
 
 	<!-- aes-perf -->
 	<project remote="linaro-swg" path="aes-perf" name="aes-perf" revision="8d17a2603952fee5d721bb31870e59629f2429cf" />
