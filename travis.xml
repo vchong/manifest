@@ -5,11 +5,12 @@
 	<remote name="linux" fetch="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds" />
 	<remote name="optee" fetch="https://github.com/OP-TEE" />
 	<remote name="qemu" fetch="https://github.com/qemu" />
+	<remote name="vchong" fetch="https://github.com/vchong" />
 
 	<default remote="optee" revision="master" />
 
 	<!-- OP-TEE gits -->
-	<project path="optee_os" name="optee_os.git" clone-depth="1" />
+	<project remote="vchong" path="optee_os" name="optee_os.git" clone-depth="1" />
 	<project path="optee_client" name="optee_client.git" clone-depth="1" />
 	<project path="optee_test" name="optee_test.git" clone-depth="1" />
 
