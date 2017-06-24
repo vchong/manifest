@@ -8,6 +8,7 @@
 	<remote name="96boards" fetch="https://github.com/96boards" />
 	<remote name="96b-hk" fetch="https://github.com/96boards-hikey" />
 	<remote name="sfnet" fetch="git://git.code.sf.net/p/strace" />
+	<remote name="vchong" fetch="https://github.com/vchong" />
 
 	<default remote="optee" revision="master" />
 
@@ -15,7 +16,10 @@
 	<project remote="sfnet" path="strace" name="code" />
 
 	<!-- l-loader -->
-	<project remote="96b-hk" path="l-loader" name="l-loader" />
+	<project remote="96b-hk" path="l-loader" name="l-loader" revision="testing/hikey960_v1.2" />
+
+	<!-- atf-fastboot -->
+	<project remote="96b-hk" path="atf-fastboot" name="atf-fastboot" />
 
 	<!-- burn-boot -->
 	<project remote="96boards" path="burn-boot" name="burn-boot" />
@@ -30,10 +34,11 @@
 
 	<!-- ARM gits -->
 	<!-- project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware" /-->
-	<project remote="96b-hk" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="hikey" />
+	<project remote="vchong" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="bl32supt" />
 
 	<!-- Tianocore, EDK2 -->
-	<project remote="96boards" path="edk2" name="edk2" revision="hikey" />
+	<project remote="96b-hk" path="edk2" name="edk2" revision="testing/hikey960_v2.5" />
+	<project remote="96b-hk" path="OpenPlatformPkg" name="OpenPlatformPkg" revision="testing/hikey960_v1.3.4" />
 
 	<!-- grub -->
 	<project remote="savannah" path="grub" name="grub" revision="refs/tags/2.02"/>
@@ -51,7 +56,7 @@
 	<project remote="linaro-swg" path="patches_hikey" name="patches_hikey" />
 
 	<!-- Build -->
-	<project path="build" name="build" >
+	<project remote="vchong" path="build" name="build" revision="bl32supt">
 		<linkfile src="hikey.mk" dest="build/Makefile" />
 	</project>
 </manifest>
