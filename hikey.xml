@@ -34,7 +34,7 @@
 
 	<!-- ARM gits -->
 	<!-- project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware" /-->
-	<project remote="vchong" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="bl32supt" />
+	<project remote="vchong" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="bl32_optee_support_v2" />
 
 	<!-- Tianocore, EDK2 -->
 	<project remote="96b-hk" path="edk2" name="edk2" revision="testing/hikey960_v2.5" />
