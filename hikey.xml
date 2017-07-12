@@ -53,7 +53,7 @@
 	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs" />
 
 	<!-- patches -->
-	<project remote="linaro-swg" path="patches_hikey" name="patches_hikey" />
+	<project remote="vchong" path="patches_hikey" name="patches_hikey" revision="960" />
 
 	<!-- Build -->
 	<project remote="vchong" path="build" name="build" revision="bl32supt">
