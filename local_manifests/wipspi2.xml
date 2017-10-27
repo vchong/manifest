@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="arm" fetch="https://github.com/ARM-software" />
+	<remote name="vchong" fetch="https://github.com/vchong" />
+	<remote name="96b-hk" fetch="https://github.com/96boards-hikey" />
+	<remote name="linaro-swg" fetch="https://github.com/linaro-swg" />
+
+	<!-- No. Conflict wif default in hikey.xml /-->
+	<!-- default remote="vchong" revision="master" /-->
+
+	<remove-project name="optee_os" />
+	<!-- remove-project name="patches_hikey" /-->
+	<remove-project name="linux" />
+	<!-- remove-project name="optee_test" /-->
+	<remove-project name="build" />
+	<!-- remove-project name="edk2" /-->
+	<remove-project name="arm-trusted-firmware" />
+
+
+	<project remote="vchong" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="poplar" />
+	<!-- project remote="96b-hk" path="edk2" name="edk2" revision="hikey960_v2.5" /-->
+	<project remote="vchong" path="optee_os" name="optee_os" revision="poplar" />
+	<!-- project remote="vchong" path="optee_test" name="optee_test" revision="spi" /-->
+	<!-- project remote="vchong" path="patches_hikey" name="patches_hikey" revision="myhikey" /-->
+	<project remote="vchong" path="poplar-linux" name="poplar-linux" revision="poplar-4.9-optee" /-->
+	<project remote="vchong" path="build" name="build" revision="poplar" >
+		<linkfile src="poplar.mk" dest="build/Makefile" />
+	</project-->
+</manifest>
