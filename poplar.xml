@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="arm" fetch="https://github.com/ARM-software" />
+	<remote name="busybox" fetch="git://busybox.net" />
+	<remote name="linaro-swg" fetch="https://github.com/linaro-swg" />
+	<remote name="optee" fetch="https://github.com/OP-TEE" />
+	<remote name="savannah" fetch="git://git.savannah.gnu.org" />
+	<remote name="linaro" fetch="https://github.com/Linaro" />
+	<remote name="sfnet" fetch="git://git.code.sf.net/p/strace" />
+
+	<default remote="optee" revision="master" />
+
+	<!-- strace -->
+	<project remote="sfnet" path="strace" name="code" />
+
+	<!-- l-loader -->
+	<project remote="linaro" path="poplar-l-loader" name="poplar-l-loader" revision="latest" />
+
+	<!-- tools -->
+	<project remote="linaro" path="poplar-tools" name="poplar-tools" revision="latest" />
+
+	<!-- OP-TEE gits -->
+	<project path="optee_os" name="optee_os" />
+	<project path="optee_client" name="optee_client" />
+	<project path="optee_test" name="optee_test" />
+
+	<!-- busybox -->
+	<project remote="busybox" path="busybox" name="busybox" revision="dbf5a6da6a4295ce26edd1ce34fde567d19afa02" />
+
+	<!-- ARM gits -->
+	<project remote="arm" path="arm-trusted-firmware" name="arm-trusted-firmware" revision="integration" />
+
+	<!-- U-BOOT -->
+	<project remote="linaro" path="poplar-u-boot" name="poplar-u-boot" revision="latest" />
+
+	<!-- grub -->
+	<project remote="savannah" path="grub" name="grub" />
+
+	<!-- Linux kernel -->
+	<project remote="linaro" path="poplar-linux" name="poplar-linux" revision="latest" />
+
+	<!-- Sample applications -->
+	<project remote="linaro-swg" path="optee_examples" name="optee_examples.git" />
+
+	<!-- Filesystem -->
+	<project remote="linaro-swg" path="gen_rootfs" name="gen_rootfs" />
+
+	<!-- Build -->
+	<project path="build" name="build" >
+		<linkfile src="hikey.mk" dest="build/Makefile" />
+	</project>
+</manifest>
