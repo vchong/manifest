@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="github"   fetch="https://github.com" />
+        <remote name="tfo"      fetch="https://git.trustedfirmware.org" />
+        <remote name="linaro-priv"      fetch="ssh://git@dev-private-git.linaro.org" />
+
+        <default remote="github" revision="master" />
+
+        <!-- OP-TEE gits -->
+        <project path="optee_client"         name="OP-TEE/optee_client.git" revision="refs/tags/3.10.0" clone-depth="1" />
+        <project path="optee_os"             name="OP-TEE/optee_os.git" revision="refs/tags/3.10.0" clone-depth="1" />
+        <project path="optee_test"           name="OP-TEE/optee_test.git" revision="refs/tags/3.10.0" clone-depth="1" />
+        <project path="build"                name="ruchi393/build.git" revision="a038ddebf5e55088a7e7ba32995abd116a1bc60d" clone-depth="1">
+                <linkfile src="qemu_v8_ww.mk" dest="build/Makefile" />
+        </project>
+
+        <!-- linaro-swg gits -->
+	<project path="linux"                name="linaro-swg/linux.git"                  revision="refs/tags/optee-3.10.0" clone-depth="1" />
+        <project path="optee_benchmark"      name="linaro-swg/optee_benchmark.git" revision="refs/tags/3.10.0" clone-depth="1"/>
+        <project path="optee_examples"       name="linaro-swg/optee_examples.git" revision="refs/tags/3.10.0" clone-depth="1" />
+        <project path="soc_term"             name="linaro-swg/soc_term.git"               revision="5493a6e7c264536f5ca63fe7511e5eed991e4f20" />
+
+	<!-- widevine git -->
+	<project path="optee-widevine-ref"  name="widevine/optee-widevine-ref.git"        revision="0f179c30e3d6ae998aae24f5e89f9d3feef14323" remote="linaro-priv" />
+
+        <!-- Misc gits -->
+        <project path="buildroot"            name="buildroot/buildroot.git"               revision="95942f5fcd35d783a49adce621ccf33480f1c88c" />
+        <project path="edk2"                 name="tianocore/edk2.git"                    revision="dd4cae4d82c7477273f3da455084844db5cca0c0" />
+        <project path="mbedtls"              name="ARMmbed/mbedtls.git"                   revision="refs/tags/mbedtls-2.16.0" clone-depth="1" />
+        <project path="qemu"                 name="qemu/qemu.git"                         revision="refs/tags/v5.1.0" clone-depth="1" />
+        <project path="trusted-firmware-a"   name="TF-A/trusted-firmware-a.git"           revision="refs/tags/v2.3" clone-depth="1" remote="tfo" />
+</manifest>
