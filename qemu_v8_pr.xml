@@ -22,9 +22,11 @@
 
         <!-- playready gits -->
         <project path="playready"            name="lhg/playready"                         revision="4.4.6211.0" remote="lhg" />
-	<project path="optee-playready"      name="optee-playready"                       revision="4.4.6211" remote="lhg" >
+	<project path="playready/source/optee-playready" name="optee-playready"           revision="4.4.6211" remote="lhg" />
+        <!--
 		<linkfile src="." dest="playready/source/optee-playready" />
-        </project>
+	</project>
+        -->
 
         <!-- Misc gits -->
         <project path="buildroot"            name="buildroot/buildroot.git"               revision="refs/tags/2020.08" clone-depth="1" />
