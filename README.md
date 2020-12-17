@@ -30,7 +30,20 @@ The initial build takes quite some time, have patience!
 $ cd optee-pr/build
 $ make toolchains -j`nproc`
 $ make -j`nproc`
+
+# To build just the PRPK
+$ make pr
+
+# To build just the PR TA
+$ make pr-ta
+
+# To clean PR targets
+$ make pr-ta-clean pr-clean
 ```
+
+**NOTE**
+- Parallel builds (`make -j#`) for the `pr*` targets are **NOT** stable. In case of errors, use `make -j1` or just `make`.
+- `pr-ta` depends on `pr`.
 
 ### Run
 ```bash
