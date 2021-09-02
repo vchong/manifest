@@ -6,11 +6,15 @@
 
         <default remote="github" revision="master" />
 
+        <project path="parsec"              name="vchong/parsec.git"                      revision="pkcs11"/>
+        <project path="parsec-tool"         name="parallaxsecond/parsec-tool.git"         revision="refs/tags/0.3.1"/>
+        <project path="cargo"               name="rust-lang/cargo.git"                    revision="refs/tags/0.53.0"/>
+
         <!-- OP-TEE gits -->
         <project path="optee_client"        name="OP-TEE/optee_client.git" />
         <project path="optee_os"            name="OP-TEE/optee_os.git" />
         <project path="optee_test"          name="OP-TEE/optee_test.git" />
-        <project path="build"               name="OP-TEE/build.git">
+        <project path="build"               name="vchong/build.git"                       revision="parsec">
                 <linkfile src="qemu.mk" dest="build/Makefile" />
         </project>
 
