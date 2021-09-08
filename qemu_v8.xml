@@ -20,7 +20,7 @@
         <project path="optee_examples"       name="linaro-swg/optee_examples.git" />
 
 	<!-- apache gits -->
-	<project path="optee_rust"           name="apache/incubator-teaclave-trustzone-sdk.git"                  clone-depth="1" groups="rust" />
+	<project path="optee_rust"           name="apache/incubator-teaclave-trustzone-sdk.git"                  clone-depth="1" groups="notdefault,rust" />
 
         <!-- Misc gits -->
         <project path="buildroot"            name="buildroot/buildroot.git"               revision="refs/tags/2021.02" clone-depth="1" />
